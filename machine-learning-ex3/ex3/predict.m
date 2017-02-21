@@ -22,7 +22,7 @@ p = zeros(size(X, 1), 1);
 %
 
 a1 = X;
-a1 = a2 = [ones(m , 1) a1];
+a1 = [ones(m , 1) a1];
 a2 = sigmoid(a1*Theta1');
 a2 = [ones(m , 1) a2];
 a3 = sigmoid(a2*Theta2');
