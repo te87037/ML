@@ -21,6 +21,21 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+%X大小
+m = size(X  , 1);
+
+%最外層X大小
+for i = 1 : m,
+	T = [];
+  %內層centroids大小
+	for j = 1 : K,
+    %把T指定為X(i)
+		T = [T ; X(i,:)];
+	end
+  %找最小並指定為min
+	[Max , idx(i)] = min(sum((T - centroids).^2 , 2));
+end
+		
 
 
 
